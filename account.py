@@ -2,14 +2,14 @@ class Account:
     """
     A class for creating and manipulating bank accounts and amount held within.
     """
-    def __init__(self, name: str) -> None:
+    def __init__(self, name: str, balance=0.0) -> None:
         """
         Constructor to create initial state of an account object
-        :param account_name: The account holder's name.
-        :param account_balance: The amount of money within the person's account.
+        :param name: The account holder's name.
+        :param balance: The amount of money within the person's account.
         """
-        self.__account_name: str = name
-        self.__account_balance: float = 0
+        self.__account_name = name
+        self.__account_balance = balance
 
     def deposit(self, amount: float) -> bool:
         """
